@@ -1,0 +1,13 @@
+pr_rules:
+  - name: Cool Rule
+    when:
+      - attribute: label
+        operator: equal
+        not: true
+        value: documentation
+    require:
+      - attribute: approvedCount
+        operator: greaterThanOrEqual
+        value: 1
+      - attribute: linesAdded
+        operator: lessThanOrEqual
