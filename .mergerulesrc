@@ -12,3 +12,12 @@ pr_rules:
       - attribute: linesAdded
         operator: lessThanOrEqual
         value: 1
+  - name: Config Change Rule
+    when:
+      - attribute: label
+        operator: equal
+        value: high-risk
+    require:
+      - attribute: approvedCount
+        operator: greaterThanOrEqual
+        value: 2
