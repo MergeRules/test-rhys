@@ -21,3 +21,12 @@ pr_rules:
       - attribute: approvedCount
         operator: greaterThanOrEqual
         value: 2
+  - name: Security Review
+    when:
+      - attribute: label
+        operator: equal
+        value: security-risk
+    require:
+      - attribute: approvedBy
+        operator: contains
+        value: taylorhakes
