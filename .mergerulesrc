@@ -11,3 +11,4 @@ pr_rules:
         value: 1
       - attribute: linesAdded
         operator: lessThanOrEqual
+        value: 1
