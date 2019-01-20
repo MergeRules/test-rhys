@@ -27,15 +27,6 @@ pr_rules:
         operator: equal
         value: security-risk
     require:
-      - attribute: approvedBy
-        operator: contains
-        value: taylorhakes
-  - name: Team Review
-    when:
-      - attribute: label
-        operator: equal
-        value: cross-team-review-required
-    require:
       - attribute: approvedByTeam
         operator: contains
         value: security
