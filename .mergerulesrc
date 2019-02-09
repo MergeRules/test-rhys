@@ -33,3 +33,8 @@ pr_rules:
       - attribute: checkRun
         operator: contains
         value: hello
+  - name: Status Check Jenkins
+    when:
+      - attribute: statusCheck
+        operator: equal
+        value: jenkins
