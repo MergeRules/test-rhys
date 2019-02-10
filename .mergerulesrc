@@ -30,9 +30,6 @@ pr_rules:
       - attribute: approvedByTeam
         operator: contains
         value: security
-      - attribute: checkRun
-        operator: contains
-        value: hello
   - name: Status Check Jenkins      
     require:
       - attribute: statusCheck
